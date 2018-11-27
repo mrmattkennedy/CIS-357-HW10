@@ -26,6 +26,7 @@ public class HistoryContent {
         public final String mode;
         public final String fromUnits;
         public final String toUnits;
+        public String _key;
 
         public final DateTime timestamp;
 
@@ -37,6 +38,14 @@ public class HistoryContent {
             addItem(new HistoryItem(1.0, 3.785, "Volume", "Gallons", "Liters", now.plusDays(1)));
         }
 
+        public HistoryItem() {
+            this.fromVal = null;
+            this.toVal = null;
+            this.mode = null;
+            this.fromUnits = null;
+            this.toUnits = null;
+            this.timestamp = null;
+        }
 
         public HistoryItem(Double fromVal, Double toVal, String mode,
                            String fromUnits, String toUnits, DateTime timestamp) {
